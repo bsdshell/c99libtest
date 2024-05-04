@@ -3,7 +3,7 @@
 #include <string.h>
 #include <stdbool.h>
 #include <math.h>
-//  #include "/Users/aaa/myfile/github/c99lib/AronCLib.h"
+#include "/Users/aaa/myfile/github/c99lib/AronCLibNew.h"
 //
 
 /**
@@ -14,6 +14,7 @@
  *
  */
 
+/*
 typedef struct GroupFloat {
     float data;
     int count;
@@ -56,6 +57,31 @@ bool isEqualArrayGroupFloat(GroupFloat** pt1, GroupFloat** pt2, const int len){
     return true;
 }
 
+bool compareArrayPt(float** arr1, float** arr2, int len) {
+    if(arr1 != NULL && arr2 != NULL) {
+        for(int i=0; i<len; i++) {
+            if(arr1[i] != NULL && arr2[i] != NULL && *arr1[i] != *arr2[i])
+                return false;
+        }
+    }
+    return true;
+}
+
+
+bool cmpFloat(const float* p1, const float* p2) {
+  return *p1 <= *p2;
+}
+
+// Compare two float array
+bool compareArrayF(float* arr1, int len1, float* arr2, int len2) {
+    if(arr1 != NULL && arr2 != NULL && len1 == len2) {
+        for(int i=0; i<len1; i++) {
+            if(arr1[i] != arr2[i])
+                return false;
+        }
+    }
+    return true;
+}
 
 
 int partitionAny(void** ls, int (*cmp)(const void *, const void *), int lo, int hi) {
@@ -95,33 +121,7 @@ void quickSortAny(void** ls, int (*cmp)(const void*, const void*), int lo, int h
         quickSortAny(ls, cmp, p+1, hi);
     }
 }
-
-
-bool compareArrayPt(float** arr1, float** arr2, int len) {
-    if(arr1 != NULL && arr2 != NULL) {
-        for(int i=0; i<len; i++) {
-            if(arr1[i] != NULL && arr2[i] != NULL && *arr1[i] != *arr2[i])
-                return false;
-        }
-    }
-    return true;
-}
-
-
-bool cmpFloat(const float* p1, const float* p2) {
-  return *p1 <= *p2;
-}
-
-// Compare two float array
-bool compareArrayF(float* arr1, int len1, float* arr2, int len2) {
-    if(arr1 != NULL && arr2 != NULL && len1 == len2) {
-        for(int i=0; i<len1; i++) {
-            if(arr1[i] != arr2[i])
-                return false;
-        }
-    }
-    return true;
-}
+*/
 
 void quickSortAny_test0() {
     int len = 1;
