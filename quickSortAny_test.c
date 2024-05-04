@@ -3,14 +3,14 @@
 #include <string.h>
 #include <stdbool.h>
 #include <math.h>
-#include "/Users/aaa/myfile/github/c99lib/AronCLibNew.h"
+#include "AronCLibNew.h"
 //
 
 /**
  *
  * Sat  4 May 12:43:06 2024 
  * Passed all tests
- * gcc -o quickSortAny_test quickSortAny_test.c
+ * gcc -I$clib -o quickSortAny_test quickSortAny_test.c
  *
  */
 
